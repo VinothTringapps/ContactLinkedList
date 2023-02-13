@@ -82,6 +82,20 @@ class LinkedList {
         }
         prev.next=temp.next;
     }
+    int search(String name)
+    {
+        int cnt=1;
+        Node temp =this.head;
+        while(temp!=null){
+            if(temp.name.equals(name))
+            {
+                return cnt;
+            }
+            temp=temp.next;
+            cnt++;
+        }
+            return -1;
+    }
     void display(){
         Node temp =this.head;
         while(temp!=null){
@@ -101,7 +115,7 @@ public class Contact {
         String s2="Enter the Email :";
         String s3="Enter the Number :";
        do{
-           log.info("1.InsertFirst \n 2.InsertLast\n3.InsertAtPos\n4.RemoveFirst\n5.RemoveLast\n6.RemoveAtPos\n7.Display");
+           log.info("1.InsertFirst \n 2.InsertLast\n3.InsertAtPos\n4.RemoveFirst\n5.RemoveLast\n6.RemoveAtPos\n7.Display\n8.search by Name");
            log.info("Enter the Choice :");
            ch= sc.nextInt();
            switch (ch){
@@ -143,11 +157,28 @@ public class Contact {
                }
                case 7->
                    l.display();
+               case 8->
+               {
+                   log.info(s1);
+                   String name=sc.next();
+                   int res=l.search(name);
+                   if(res>0)
+                   {
+                       log.info(res+"");
+
+                   }
+                   else
+                   {
+                       log.info("The name is not found");
+                   }
+
+               }
+
                default ->
                    log.info("Wrong Choice !");
 
            }
-           }while(ch!=8);
+           }while(ch!=9);
        }
 
     }
