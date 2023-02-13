@@ -5,13 +5,13 @@ import java.util.logging.Logger;
 
 class Node{
     String name;
-    String Email;
-    String Number;
+    String email;
+    String number;
     Node next;
     Node(String name,String email,String number){
         this.name=name;
-        this.Email=email;
-        this.Number=number;
+        this.email=email;
+        this.number=number;
         this.next=null;
     }
 }
@@ -85,7 +85,7 @@ class LinkedList {
     void display(){
         Node temp =this.head;
         while(temp!=null){
-            String s="Name--"+temp.name+"\nEmail-- "+temp.Email+"\nNumber--"+temp.Number;
+            String s="Name--"+temp.name+"\nEmail-- "+temp.email+"\nNumber--"+temp.number;
             log.info(s);
             temp=temp.next;
         }
