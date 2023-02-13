@@ -106,30 +106,30 @@ public class Contact {
                    log.info("Enter the Name :");
                   String name= sc.next();
                   log.info("Enter the Email :");
-                  String Email=sc.next();
+                  String email=sc.next();
                   log.info("Enter the Number :");
                   String number=sc.next();
-                  l.insertFirst(name,Email,number);
+                  l.insertFirst(name,email,number);
                }
                case 2->{
                    log.info("Enter the Name :");
                    String name= sc.next();
                    log.info("Enter the Email :");
-                   String Email=sc.next();
+                   String email=sc.next();
                    log.info("Enter the Number :");
                    String number=sc.next();
-                   l.insertLast(name,Email,number);
+                   l.insertLast(name,email,number);
                }
                case 3->{
                    log.info("Enter the Name :");
                    String name=sc.next();
                    log.info("Enter the Email :");
-                   String Email= sc.next();
+                   String email= sc.next();
                    log.info("Enter the Number :");
                    String number=sc.next();
                    log.info("Enter the Position :");
                    int index=sc.nextInt();
-                   l.insertAt(name,Email,number,index);
+                   l.insertAt(name,email,number,index);
                }
                case 4-> l.removeFirst();
                case 5-> l.removeLast();
