@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.Scanner;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 class Node{
@@ -164,7 +165,7 @@ public class Contact {
                    int res=l.search(name);
                    if(res>0)
                    {
-                       log.info(res+"");
+                       log.log(Level.INFO,()->"Element is At Position :"+res);
 
                    }
                    else
