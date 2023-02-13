@@ -104,32 +104,32 @@ public class Contact {
            switch (ch){
                case 1->{
                    log.info("Enter the Name :");
-                  String name= sc.next();
+                  String nameInsertFirst= sc.next();
                   log.info("Enter the Email :");
-                  String email=sc.next();
+                  String emailInsertFirst=sc.next();
                   log.info("Enter the Number :");
-                  String number=sc.next();
-                  l.insertFirst(name,email,number);
+                  String numberInsertFirst=sc.next();
+                  l.insertFirst(nameInsertFirst,emailInsertFirst,numberInsertFirst);
                }
                case 2->{
                    log.info("Enter the Name :");
-                   String name= sc.next();
+                   String nameInsertLast= sc.next();
                    log.info("Enter the Email :");
-                   String email=sc.next();
+                   String emailInsertLast=sc.next();
                    log.info("Enter the Number :");
-                   String number=sc.next();
-                   l.insertLast(name,email,number);
+                   String numberInsertLast=sc.next();
+                   l.insertLast(nameInsertLast,emailInsertLast,numberInsertLast);
                }
                case 3->{
                    log.info("Enter the Name :");
-                   String name=sc.next();
+                   String nameInsertAt=sc.next();
                    log.info("Enter the Email :");
-                   String email= sc.next();
+                   String emailInsertAt= sc.next();
                    log.info("Enter the Number :");
-                   String number=sc.next();
+                   String numberInsertAt=sc.next();
                    log.info("Enter the Position :");
                    int index=sc.nextInt();
-                   l.insertAt(name,email,number,index);
+                   l.insertAt(nameInsertAt,emailInsertAt,numberInsertAt,index);
                }
                case 4-> l.removeFirst();
                case 5-> l.removeLast();
