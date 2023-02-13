@@ -8,9 +8,9 @@ class Node{
     String Email;
     String Number;
     Node next;
-    Node(String name,String Email,String number){
+    Node(String name,String email,String number){
         this.name=name;
-        this.Email=Email;
+        this.Email=email;
         this.Number=number;
         this.next=null;
     }
@@ -26,17 +26,17 @@ class LinkedList {
         this.size = 0;
     }
 
-    void insertFirst(String name, String Email, String number) {
-        Node n = new Node(name, Email, number);
-        if (this.head == null) {
-            this.head = n;
-        } else {
+    void insertFirst(String name, String email, String number) {
+        Node n = new Node(name, email, number);
+         if(this.head == null)
+             this.head = n;
+        else {
             n.next = this.head;
             this.head = n;
         }
     }
-    void insertlast(String name,String Email,String Number){
-        Node n=new Node(name,Email,Number);
+    void insertLast(String name,String email,String number){
+        Node n=new Node(name,email,number);
         Node temp;
         if (this.head == null) {
             this.head = n;
@@ -51,8 +51,8 @@ class LinkedList {
             this.size++;
         }
     }
-    void insertat(String name,String Email,String number,int index){
-        Node n=new Node(name,Email,number);
+    void insertAt(String name,String email,String number,int index){
+        Node n=new Node(name,email,number);
         Node temp=this.head;
         for (int i=1;i<index;i++){
             temp=temp.next;
@@ -82,10 +82,11 @@ class LinkedList {
         }
         prev.next=temp.next;
     }
-    void Display(){
+    void display(){
         Node temp =this.head;
         while(temp!=null){
-            log.info(temp.name+""+temp.Email+""+temp.Number);
+            String s="Name--"+temp.name+"\nEmail-- "+temp.Email+"\nNumber--"+temp.Number;
+            log.info(s);
             temp=temp.next;
         }
     }
@@ -117,7 +118,7 @@ public class Contact {
                    String Email=sc.next();
                    log.info("Enter the Number :");
                    String number=sc.next();
-                   l.insertlast(name,Email,number);
+                   l.insertLast(name,Email,number);
                }
                case 3->{
                    log.info("Enter the Name :");
@@ -128,7 +129,7 @@ public class Contact {
                    String number=sc.next();
                    log.info("Enter the Position :");
                    int index=sc.nextInt();
-                   l.insertat(name,Email,number,index);
+                   l.insertAt(name,Email,number,index);
                }
                case 4-> l.removeFirst();
                case 5-> l.removeLast();
@@ -138,7 +139,7 @@ public class Contact {
                    l.removeAt(index);
                }
                case 7->
-                   l.Display();
+                   l.display();
                default ->
                    log.info("Wrong Choice !");
 
